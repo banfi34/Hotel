@@ -120,6 +120,7 @@ public class Bookings {
                     [2] Search distance to center
                     [3] Sort by price(low to high)
                     [4] sort by rating(high to low)
+                    [5] book a room
                     [0] Back
                     """);
             try {
@@ -141,6 +142,8 @@ public class Bookings {
                     case "3" -> dataService.sortByPrice(checkInDate, checkoutDate, pool1, kids, evening, restaurant1);
 
                     case "4" -> dataService.sortByRating(checkInDate, checkoutDate, pool1, kids, evening, restaurant1);
+
+                    case "5" -> bookARoom();
 
                     case "0" -> running = false;
                 }
